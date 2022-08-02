@@ -1,67 +1,44 @@
 #include<stdio.h>
 #include<stdlib.h>
  
-// Aluno: Túlio Ferreira Franco Carvalho
-// RA: 156743
-// AED2 - Alvaro
+// Túlio Ferreira Franco Carvalho
 
-typedef struct compose{
-    int voucher_value, total_books, total_voucher;
-} compose;
+void insertion_sort(int *vector, int N, int recursao){
+    int i, j, tmp, position;
  
+    for(i = 1; i < N; i++){
+        tmp = vector[i];
+        printf("%d ", recursao);
+        printf("%d ", vector[i]);
+        recursao -= 1;
+        for(j = i-1; j >= 0 && tmp < vector[j]; j--){
+            vector[j+1] = vector[j];
+            }
+        printf("%d",j+1);
+        printf("\n");
+        vector[j+1] = tmp;
+        }
  
- 
- 
-void work(compose *book){
-    int voucher_temp = 0, resto = 0;
- 
-    if(book->total_voucher >= book->voucher_value){
-        voucher_temp = book->total_voucher/book->voucher_value;
-        resto = book->total_voucher%book->voucher_value;
- 
-        book->total_books = book->total_books + voucher_temp;
-        book->total_voucher = voucher_temp + resto;
-        return work(book);
+    for(int i = 0; i < N; i++){
+        printf("%d ",vector[i]);
     }
- 
-    printf("%d",book->total_books);
-    printf("\n");
 }
- 
- 
- 
- 
- 
+
 int main(){
  
-    int N, i = 0;
+    int N;
     scanf("%d",&N);
+    int recursao = N - 1;
+    int* vector;
  
-    int money, price, voucher_value, pre_book = 0;
- 
-    while(i!=N){
-        scanf("%d",&money);
-        scanf("%d",&price);
-        scanf("%d",&voucher_value);
+    vector = malloc ( N * sizeof(int));
  
  
-        compose *book;
-        book = malloc (sizeof(compose));
- 
- 
-        book->voucher_value = voucher_value;
-        book->total_books = money/price;
-        book->total_voucher = book->total_books;
- 
-        work(book);
- 
- 
- 
- 
-        free(book);
-        i++;
- 
+    for(int i = 0; i < N; i++){
+        scanf("%d",&vector[i]);
     }
-return 0;
+    insertion_sort(vector, N, recursao);
  
+    free(vector);
+return 0;
 }

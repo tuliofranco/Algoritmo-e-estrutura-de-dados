@@ -1,10 +1,7 @@
 #include <iostream>
 #include <cstdlib>
  
-
-// Aluno: Túlio Ferreira Franco Carvalho
-// RA: 156743
-// AED2 - Alvaro
+// Túlio Ferreira Franco Carvalho;
 
 #define BLACK 0
 #define RED 1
@@ -130,7 +127,6 @@ private:
         root->color =  BLACK;
     }
     
- 
 public:
     RBTree() {
         TNULL = new Node;

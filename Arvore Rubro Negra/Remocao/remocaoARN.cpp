@@ -7,9 +7,7 @@
 #define left 0
 #define right 1
  
- // Aluno: Túlio Ferreira Franco Carvalho
- // Professor: Alvaro
- // RA: 156743
+// Túlio Ferreira Franco Carvalho
  
 using namespace std;
  

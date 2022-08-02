@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-// Aluno: Túlio Ferreira Franco Carvalho
-// RA: 156743
-// AED2 - Alvaro
- 
+// Túlio Ferreira Franco Carvalho
+
 void SWAP_STRING(char *vet[], int a, int b){    //Função que troca de posição duas strings no vetor
     char aux;
     int i=0;
