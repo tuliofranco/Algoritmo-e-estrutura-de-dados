@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-// Aluno: Túlio Ferreira Franco Carvalho
-// RA: 156743
-// AED2 - Alvaro
+// Túlio Ferreira Franco Carvalho
  
 void QuickSort(int* A, int p, int r, int elemento) {
     int q;
@@ -49,16 +47,12 @@ int main(){
     int N, elemento;
     int* vector;
  
-    // elemento
     scanf("%d", &elemento);
  
-    // Quantidade de elementos no vetor;
     scanf("%d", &N);
  
-    // Separa a memória para o trabalho;
     vector = malloc(N * sizeof(int));
  
-    // Ler todos os valores e colocar no ponteiro;
     for(int i = 0; i < N; i++){
         scanf("%d", &vector[i]);
     }

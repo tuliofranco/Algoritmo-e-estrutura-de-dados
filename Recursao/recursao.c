@@ -1,10 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
  
-// Aluno: Túlio Ferreira Franco Carvalho
-// RA: 156743
-// AED2 - Alvaro
- 
+// Túlio Ferreira Franco Carvalho;
  
 typedef struct compose{
     int voucher_value, total_books, total_voucher;
@@ -37,24 +34,14 @@ int main(){
         scanf("%d",&money);
         scanf("%d",&price);
         scanf("%d",&voucher_value);
- 
- 
         compose *book;
         book = malloc (sizeof(compose));
- 
- 
         book->voucher_value = voucher_value;
         book->total_books = money/price;
         book->total_voucher = book->total_books;
- 
         work(book);
- 
- 
- 
- 
         free(book);
         i++;
     }
 return 0;
- 
 }

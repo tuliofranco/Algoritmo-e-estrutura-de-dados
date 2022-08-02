@@ -2,17 +2,13 @@
 #include<stdlib.h>
  
 // Túlio Ferreira Franco Carvalho
-// RA: 156743
-// Prof° Alvaro 
- 
-//Estrutura do tipo nó da AVL
+
 typedef struct{
     int info, altura;
     struct AVL* esquerda;
     struct AVL* direita;
 } AVL;
- 
-//Função recursiva que retorna a altura do nó chave
+
 int Altura(AVL* node){
     int h_esq, h_dir;
  
@@ -29,7 +25,7 @@ int Altura(AVL* node){
         }
     }
 }
-//Função que rotaciona à direita uma subárvore
+
 void Rotacao_direita(AVL** node_a){
     AVL* node_b;
  
@@ -43,8 +39,7 @@ void Rotacao_direita(AVL** node_a){
     node_b->altura = Altura(node_b);
     *node_a = node_b;
 }
- 
-//Função que rotaciona à esquerda uma subárvore
+
 void Rotacao_esquerda(AVL** node_a){
     AVL* node_b;
  
@@ -226,5 +221,5 @@ int main(){
         alt_dir = Altura(Busca(root, no_busca)->direita);
         printf("%d, %d, %d", alt, alt_esq, alt_dir);
     }
-    Libera(root);                                                    //Liberação do espaço de memória alocado para a AVL
+    Libera(root);
 }
